@@ -1,0 +1,19 @@
+:root {
+    --background: black;
+    --text: white;
+    --link-text: rgb(150, 150, 150)
+    --hover-text: rgb(213, 213, 213)
+}
+
+.black-and-white {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a {
+    color: var(--link-text);
+}
+
+a:hover {
+    color: var(--link-text);
+}
