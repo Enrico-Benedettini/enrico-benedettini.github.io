@@ -23,9 +23,7 @@ function setNavbarHiding() {
       navbar.style.position = 'fixed'
     }
     
-    console.log(`prevScrollPos = ${prevScrollPos}`)
     prevScrollPos = currentScrollPos;
-    console.log(`currentScrollPos = ${currentScrollPos}`)
     
     timeout = setTimeout(() => {
       navbar.style.top = '-50px'; // Adjust this value based on the navbar height
@@ -66,6 +64,7 @@ function setNightModeListener() {
     switchToOppositeColor('--background-card-begin')
     switchToOppositeColor('--background-card-end')
     switchToOppositeColor('--background-home')
+    switchToOppositeColor('--background-hover')
     switchToOppositeColor('--background-selected')
     switchToOppositeColor('--background-footer-begin')
     switchToOppositeColor('--background-footer-end')
