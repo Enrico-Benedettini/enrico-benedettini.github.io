@@ -42,25 +42,17 @@ function setNavLinksListeners() {
   })
 }
 
-function switchCSSVariables(first,second) {
-    // Get the root element to access CSS variables
-    const root = document.documentElement;
-    
-    // Get the current values of the CSS variables
-    const primaryColor = getComputedStyle(root).getPropertyValue(first);
-    const secondaryColor = getComputedStyle(root).getPropertyValue(second);
-    
-    // Swap the values of the CSS variables
-    root.style.setProperty(first, firstOppositeColor);
-    root.style.setProperty(second, secondOppositeColor);
-}
-
 function setNightModeListener() {
-  document.querySelector('input[name="black-and-white"]').addEventListener('change',(e)=>{
-    // switchCSSVariables('--background-night-mode','--text-night-mode')
-    // switchCSSVariables('--background-first-section','--text-first-section')
-    // switchCSSVariables('--background-second-section','--text-second-section')
-    debugger
+  let btn = document.querySelector('.night-mode-container')
+  btn.addEventListener('click',(e)=>{
+    let icon = btn.querySelector('i')
+    if (icon.classList.contains("fa-moon")) {
+      icon.classList.remove('fa-moon')
+      icon.classList.add('fa-sun')
+    } else {
+      icon.classList.remove('fa-sun')
+      icon.classList.add('fa-moon')
+    }
     switchToOppositeColor('--background')
     switchToOppositeColor('--text')
     switchToOppositeColor('--background-night-mode')
@@ -86,7 +78,6 @@ function setNightModeListener() {
 
 function invertColor(rgbColor) {
   const bracketIndex = rgbColor.indexOf('(')+1
-  debugger
 
   // Remove the "rgb(" and ")" parts of the color string
   const colorValues = rgbColor.slice(bracketIndex, -1).split(", ");
@@ -104,7 +95,7 @@ function invertColor(rgbColor) {
   // Return the inverse color as an RGB string
   if (bracketIndex==5) { // if color is rgba
     return `rgba(${invertedRed}, ${invertedGreen}, ${invertedBlue}, ${colorValues[3]})`;
-  } else {// if color is rgb
+  } else { // if color is rgb
     return `rgb(${invertedRed}, ${invertedGreen}, ${invertedBlue})`;
   }
 }

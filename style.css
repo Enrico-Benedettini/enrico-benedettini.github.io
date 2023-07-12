@@ -51,19 +51,21 @@ body {
     right: 0;
     width: 100%;
     z-index: 1;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
     justify-content: space-between; /* Distribute the links across the full width */
     transition: top 0.3s ease-in-out;
 }
 
 .navbar-content {
-    width: 80%;
+    grid-column: 2;
+    width: 100%;
     display: flex;
     justify-content: center; /* Center the navbar content horizontally */
     margin: 0 auto; /* Add auto margin to center the content within the navbar */  
 }
 
-.navbar a {
+.navbar > div > a {
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -73,7 +75,7 @@ body {
     flex-grow: 1; /* Allow the links to flex and fill the available space */
 }
 
-.navbar a:hover {
+.navbar > div > a:hover {
     background-color: #ddd;
     color: black;
     text-shadow: 0 0 0;
@@ -87,12 +89,10 @@ body {
 /* **********      End of CSS for navbar     ********** */
 
 /* **********       CSS for Night-mode       ********** */
-.night-mode {
-    background-color: var(--background-night-mode);
-    color: var(--text-night-mode);
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
+.night-mode-container {
+    grid-column: 3;
+    padding: 7.5px 15px;
+    text-align: right;
 }
 /* **********    End of CSS for Night-mode   ********** */
 
