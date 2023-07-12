@@ -1,26 +1,29 @@
+/* General variables */
 :root {
-    --background: rgb(0, 136, 255);
-    --text: white;
-    --background-night-mode: black;
-    --text-night-mode: white;
-    --background-header-begin: rgb(0, 72, 255);
-    --background-header-end: rgb(0, 4, 255);
-    --background-card-begin: rgb(0, 72, 255);
-    --background-card-end: rgb(0, 4, 255);
-    --background-home: #f1f1f1;
-    --background-selected: rgb(0, 92, 172);
-    --background-first-section: #f1f1f1;
-    --text-first-section: black;
-    --background-second-section: #e6e6e6;
-    --text-second-section: rgb(20, 20, 20);
-    --background-footer-begin: rgba(0, 255, 234, 1);
-    --background-footer-end: rgba(0, 183, 255, 1);
-    --link-text: rgb(150, 150, 150);
-    --hover-text: rgb(213, 213, 213);
-    --text-home: black;
+    --background:rgb(0, 136, 255);
+    --text:rgb(255, 255, 255);
+    --background-night-mode:rgb(0, 0, 0);
+    --text-night-mode:rgb(255, 255, 255);
+    --background-header-begin:rgb(0, 72, 255);
+    --background-header-end:rgb(0, 4, 255);
+    --background-card-begin:rgba(0, 149, 255, 0.7);
+    --background-card-end:rgba(0, 4, 255, 1);
+    --background-home:rgb(241, 241, 241);
+    --background-selected:rgb(0, 92, 172);
+    --background-first-section:var(--background-home);
+    --text-first-section:rgb(0, 0, 0);
+    --background-second-section:rgb(230, 230, 230);
+    --text-second-section:rgb(20, 20, 20);
+    --text-skills:rgb(255, 255, 255);
+    --background-footer-begin:rgb(0, 255, 234);
+    --background-footer-end:rgb(0, 183, 255);
+    --link-text:rgb(30, 30, 30);
+    --hover-text:rgb(90, 90, 90);
+    --text-home:rgb(0, 0, 0);
 }
 
-.black-and-white {
+/* Default settings for the whole page */
+body {
     background-color: var(--background);
 }
 
@@ -29,7 +32,7 @@ a {
 }
 
 a:hover {
-    color: var(--link-text);
+    color: var(--hover-text);
 }
 
 /* **********         CSS for navbar         ********** */
@@ -95,7 +98,7 @@ body {
 
 /* **********         CSS for header         ********** */
 .header {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     padding: 20px;
     background-color: var(--background-header);
     background-image: linear-gradient(to top right, var(--background-header-begin),var(--background-header-end));
@@ -126,12 +129,14 @@ body {
 
 /* **********         CSS for sections         ********** */
 section {
-    height: 100vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--text-home);
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .container {
@@ -167,9 +172,10 @@ section {
     width: 300px;
     height: 300px;
     perspective: 1000px; /* Perspective value for 3D transforms */
-    transform-style: preserve-3d;
     position: relative;
-    z-index: 1;
+    margin: 50px;
+    margin-bottom: 40px;
+    color: var(--text-skills);
 }
 
 .card-inner {
@@ -177,10 +183,11 @@ section {
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    position: absolute;
 }
 
 .card:hover .card-inner {
-    transform: scale(1.2) rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .card-front,
@@ -194,15 +201,18 @@ section {
     backface-visibility: hidden;
 }
 
+.card-back > p {
+    vertical-align: bottom;
+    margin: 0;
+}
+
 .card-front {
     background-color: #f1f1f1;
-    z-index: 1;
 }
   
 .card-back {
     background-color: #e6e6e6;
-    transform: rotateY(180deg);
-    z-index: 2;
+    transform: rotateY(-180deg);
 }
 
 #skill1 {
