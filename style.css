@@ -30,6 +30,7 @@ body {
 
 a {
     color: var(--link-text);
+    text-decoration: none;
 }
 
 a:hover {
@@ -165,6 +166,7 @@ section {
 #skills {
     background-color: var(--background-first-section);
     color: var(--text-first-section);
+    padding-bottom: 60px;
 }
 
 .skills {
@@ -198,24 +200,14 @@ section {
 .card-back {
     background-image: linear-gradient(to bottom right,
     var(--background-card-begin),var(--background-card-end));
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
 }
-
-.card-back > p {
-    vertical-align: bottom;
-    margin: 0;
-}
-
-.card-front {
-    background-color: #f1f1f1;
-}
   
 .card-back {
-    background-color: #e6e6e6;
     transform: rotateY(-180deg);
 }
 
@@ -237,12 +229,20 @@ section {
 #skill6 {
     grid-column: 3;
 }
-/* **********   End of CSS for skill's section ********** */
+/* **********  End of CSS for skills' section  ********** */
 
+
+/* **********     CSS for projects' section    ********** */
 #projects {
     background-color: var(--background-second-section);
     color: var(--text-second-section);
 }
+
+.project {
+    padding: 20px;
+}
+/* ********** End of CSS for projects' section ********** */
+
 
 #experience {
     background-color: var(--background-first-section);
