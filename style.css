@@ -37,7 +37,6 @@ a:hover {
     color: var(--hover-text);
 }
 
-/* **********         CSS for navbar         ********** */
 body {
     margin: 0;
     padding: 0;
@@ -45,6 +44,11 @@ body {
     color: var(--text);
 }
 
+h1 {
+    font-size: 50px;
+}
+
+/* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);
     position: fixed;
@@ -134,7 +138,7 @@ body {
 
 /* **********         CSS for sections         ********** */
 section {
-    min-height: 50vh;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,8 +242,13 @@ section {
     color: var(--text-second-section);
 }
 
+#projects > .container > br {
+    border: 3px solid;
+}
+
 .project {
     padding: 20px;
+    border-top: 2px solid black;
 }
 /* ********** End of CSS for projects' section ********** */
 
@@ -254,10 +263,23 @@ section {
     color: var(--text-second-section);
 }
 
+/* **********     CSS for contacts' section    ********** */
 #contact {
     background-image: linear-gradient(to bottom right, var(--background-footer-begin),var(--background-footer-end));
 }
 
-h1 {
-    font-size: 50px;
+#contact > .container {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
 }
+
+.contacts {
+    grid-column: 1;
+    text-align: left;
+}
+
+.contacts > p {
+    margin: 5px 0;
+    text-align: left;
+}
+/* ********** End of CSS for contacts' section ********** */
