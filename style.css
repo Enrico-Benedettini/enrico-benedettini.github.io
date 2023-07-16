@@ -48,6 +48,10 @@ h1 {
     font-size: 50px;
 }
 
+p {
+    margin: 0;
+}
+
 /* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);
@@ -253,10 +257,49 @@ section {
 /* ********** End of CSS for projects' section ********** */
 
 
+/* **********   CSS for experiences' section   ********** */
 #experience {
     background-color: var(--background-first-section);
     color: var(--text-first-section);
 }
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.headline {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+}
+
+.title {
+    grid-column: 1;
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.language {
+    grid-column: 2;
+    text-align: right;
+    vertical-align: middle;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.experience iframe {
+    width: 200px;
+    height: 200px;
+}
+
+.description {
+    margin: 0;
+    padding-left: 25px;
+    text-align: left;
+    float: left;
+}
+/* ******** End of CSS for experiences' section  ******** */
 
 #blog {
     background-color: var(--background-second-section);
@@ -265,17 +308,19 @@ section {
 
 /* **********     CSS for contacts' section    ********** */
 #contact {
+    display: block;
     background-image: linear-gradient(to bottom right, var(--background-footer-begin),var(--background-footer-end));
 }
 
 #contact > .container {
     display: grid;
-    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-columns: 4fr 1fr 4fr;
 }
 
 .contacts {
     grid-column: 1;
     text-align: left;
+    align-items: flex-start;
 }
 
 .contacts > p {
