@@ -271,6 +271,7 @@ section {
 .headline {
     display: grid;
     grid-template-columns: 8fr 4fr;
+    margin: 10px 0;
 }
 
 .title {
@@ -293,11 +294,17 @@ section {
     height: 200px;
 }
 
-.description {
+.description-right, .description-left {
     margin: 0;
-    padding-left: 25px;
     text-align: left;
-    float: left;
+}
+
+.description-right {
+    padding-left: 25px;
+}
+
+.description-left {
+    padding-right: 25px;
 }
 /* ******** End of CSS for experiences' section  ******** */
 
