@@ -19,8 +19,10 @@ function setNavbarHiding() {
       navbar.style.top = '-50px'; // Adjust this value based on the navbar height
     } else if (currentScrollPos == 0) {
       navbar.style.position = 'static'
+      navbar.classList.remove('shadow')
     } else {
       navbar.style.position = 'fixed'
+      navbar.classList.add('shadow')
     }
     
     prevScrollPos = currentScrollPos;
@@ -72,6 +74,7 @@ function setNightModeListener() {
     switchToOppositeColor('--hover-text')
     switchToOppositeColor('--text-home')
     switchToOppositeColor('--text-skills')
+    switchToOppositeColor('--border-line')
   });
 }
 

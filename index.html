@@ -13,6 +13,7 @@
             <div class="navbar-content">
                 <a class="active" href="#home">Home</a>
                 <a href="#about">About</a>
+                <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
@@ -21,22 +22,26 @@
             </div>
             
             <a class="night-mode-container">
-                    <i class="fa-regular fa-moon fa-2x"></i>
+                <i class="fa-regular fa-moon fa-2x"></i>
             </a>
         </div>
         <div class="header">
-            <img src="public/img/Enrico0-cropped.png" alt="Profile Picture" class="profile-picture">
-            <h1>Enrico Benedettini</h1>
+            <div class="container">
+                <img src="public/img/Enrico0-cropped.png" alt="Profile Picture" class="profile-picture">
+                <h1>Enrico Benedettini</h1>
+            </div>
         </div>
 
         <section id="home">
-            <div class="container">
-                <h2>Welcome to My Personal Website</h2>
+            <div class="container border-line-l">
+                <div>
+                    <h2>S0ftw4r3 3ng1n33r</h2>
+                </div>
             </div>
         </section>
 
         <section id="about">
-            <div class="container">
+            <div class="container border-line-r">
                 <h2>About Me</h2>
                 
                 <p>
@@ -49,6 +54,8 @@
                     I thrive on ambition and thrive in high-pressure environments
                     as they bring out the best in me, increasing my productivity and drive.
                 </p>
+
+                <br>
                   
                 <p>
                     Currently, I am pursuing my studies at <strong>EPFL</strong> in Lausanne, Switzerland,
@@ -60,6 +67,8 @@
                     
                     This further motivates me to strive for excellence in everything I undertake.
                 </p>
+
+                <br>
                   
                 <p>
                     My main interests lie in backend development, with a strong
@@ -69,6 +78,8 @@
                     ensuring they perform at their best, as this directly contributes
                     to the overall efficiency and effectiveness of software systems.
                 </p>
+
+                <br>
                   
                 <p>
                     My ultimate career aspiration is to become a seasoned project manager.
@@ -78,6 +89,8 @@
                     Hard work and continuous improvement are fundamental values that drive me,
                     and I am always eager to embrace challenges and seize opportunities for growth.
                 </p>
+
+                <br>
                   
                 <p>
                     In summary, I am a highly motivated and driven individual with
@@ -93,10 +106,24 @@
             </div>
         </section>
 
+        <section id="education">
+            <div class="container border-line-l">
+                <h2>Education</h2>
+                <p>
+                    <strong>Bsc</strong> in <strong>Informatics</strong> - Università della Svizzera italiana, USI <strong>Lugano, Switzerland</strong>
+                    <em>09/2020 - 02/2024</em>
+                </p>
+                <p>
+                    <strong>Information Technology and Automation</strong> - IS Pascal Comandini, <strong>Cesena, Italy</strong>
+                    <em>09/2015 - 06/2020</em>
+                </p>
+            </div>
+        </section>
+
         <section id="skills">
-            <div class="container">
-                <h2>Skills</h2>
+            <div class="container border-line-r">
                 
+                <h2>Skills</h2>
                 <div class="skills">
                     <div class="card dev-section" id="skill1">
 
@@ -215,7 +242,7 @@
                 <div class="project sa1">
 
                     <h3>The Timeline</h3>
-                    <p>
+                    <p class="project-desc">
                         Website about the <strong>history</strong> of <strong>videogames</strong>,
                         going through <strong>every major videogame</strong>,
                         <strong>console</strong> and <strong>event</strong> for <strong>each generation</strong>.
@@ -232,7 +259,7 @@
                 <div class="project pf2">
 
                     <h3>Html Pretty Printer</h3>
-                    <p>
+                    <p class="project-desc">
                         Application to <strong>indent</strong> the <strong>HTML</strong> in a pretty way
                         (according to guidelines on a proper html indentation available
                         <a href="https://developers.google.com/style/html-formatting"><ins>here</ins></a>).
@@ -247,7 +274,7 @@
                 <div class="project sa3">
 
                     <h3>DoX</h3>
-                    <p>
+                    <p class="project-desc">
                         Web Application mocking <strong>Google Docs</strong>.
                         <br>
                         Developed as final project for Software Atelier 3 SA 2021-2022, part of BSc INF at USI Lugano,
@@ -260,7 +287,7 @@
                 <div class="project sa4">
 
                     <h3>The Devine Codemy</h3>
-                    <p>
+                    <p class="project-desc">
                         Educational Web Application to <strong>learn</strong> <strong>coding</strong> in
                         a <strong>fun</strong> and <strong>entertaining</strong> way.
                         <br>
@@ -274,7 +301,7 @@
                 <div class="project data-viz">
 
                     <h3>Friends Visualization</h3>
-                    <p>
+                    <p class="project-desc">
                         Website to display human-intuitive visualizations about the world-wide famous
                         <strong>Tv-Series</strong> <strong>Friends</strong>, with an inspection about
                         <strong>interactions</strong>, <strong>emotions</strong> and the <strong>script</strong> of the program.
@@ -290,7 +317,7 @@
                 <div class="project sdp">
 
                     <h3>Procrastinot</h3>
-                    <p>
+                    <p class="project-desc">
                         Productivity Application for <strong>mobile devices</strong> to <strong>create</strong>, <strong>build</strong>
                         and <strong>share</strong> new <strong>habits</strong>.
                         <br>
@@ -305,7 +332,7 @@
         </section>
 
         <section id="experience">
-            <div class="container">
+            <div class="container border-line-l">
                 <h2>Experience</h2>
                 <!-- Add content for the experience section -->
 
@@ -333,8 +360,8 @@
                     <div class="content">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1407837.8094493824!2d11.9781616!3d44.2621605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4d41ed493c1%3A0xbee0ab1075577a47!2sCesena%20FC!5e1!3m2!1sit!2sit!4v1689607021304!5m2!1sit!2sit"
                          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <p class="description-left">
-
+                        <p class="description-right">
+                            Student-Assistant worker: Front-desk service for customers, rearrangement and sorting of the books.
                         </p>
                     </div>
                 </div>
@@ -345,8 +372,9 @@
                         <p class="language"><strong>Language</strong>: Italian</p>
                     </div>
                     <div class="content">
-                        <p class="description-right">
-                            
+                        <p class="description-left">
+                            A month of heavy manual work in a sperimentational farm. Summer job useful to support my studies
+                            in Switzerland.
                         </p>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d888641.1816489343!2d11.315423947461161!3d44.03913941631762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132cbac600a944fb%3A0x2fc029ddf2a9df78!2sAzienda%20Martorano%205%20Centrale%20Sperimentazioni%20e%20Servizi%20Agro-ambientali%20Soc.%20Cop.%20A.r.l.!5e1!3m2!1sit!2sit!4v1689608713678!5m2!1sit!2sit"
                          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -11,6 +11,7 @@
     --background-home:rgb(241, 241, 241);
     --background-hover:rgb(220, 220, 220);
     --background-selected:rgb(0, 92, 172);
+    --border-line:rgb(0, 255, 234);
     --background-first-section:var(--background-home);
     --text-first-section:rgb(0, 0, 0);
     --background-second-section:rgb(230, 230, 230);
@@ -50,8 +51,18 @@ h1 {
 
 p {
     margin: 0;
+    text-align: center;
 }
 
+.border-line-l {
+    padding: 20px;
+    border-left: 1px solid var(--border-line)
+}
+
+.border-line-r {
+    padding: 20px;
+    border-right: 1px solid var(--border-line)
+}
 /* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);
@@ -97,6 +108,10 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.shadow {
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8);
+}
+
 /* **********       CSS for Night-mode       ********** */
 .night-mode-container {
     grid-column: 3;
@@ -116,8 +131,6 @@ p {
     background-image: linear-gradient(to top right, var(--background-header-begin),var(--background-header-end));
     /* display: grid;
     grid-template-columns: 450fr 1fr 2500fr; */
-    display: flex;
-    flex-direction: row;
 }
 
 .profile-picture {
@@ -132,7 +145,12 @@ p {
     margin-right: 25px;
 }
 
-.header > h1 {
+.header > .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.header > .container > h1 {
     line-height: 2;
     grid-column: 3;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -142,8 +160,7 @@ p {
 
 /* **********         CSS for sections         ********** */
 section {
-    min-height: 20vh;
-    display: flex;
+    min-height: 15vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -164,20 +181,38 @@ section {
     color: var(--text-first-section);
 }
 
+#home > .container > div { 
+    display: flex;
+    flex-direction: column;
+}
+
 #about {
     background-color: var(--background-second-section);
     color: var(--text-second-section);
 }
 
+#education {
+    background-color: var(--background-first-section);
+}
 
 /* **********      CSS for skills' section     ********** */
 #skills {
-    background-color: var(--background-first-section);
+    background-color: var(--background-second-section);
     color: var(--text-first-section);
     padding-bottom: 60px;
 }
 
+#skills > .container {
+    display: grid;
+    grid-template-columns: 2fr 10fr 2fr;
+}
+
+#skills > .container > h2 {
+    grid-column: 2;
+}
+
 .skills {
+    grid-column: 2;
     display: grid;
     grid-template-columns: 10fr 1fr 10fr;
 }
@@ -242,7 +277,7 @@ section {
 
 /* **********     CSS for projects' section    ********** */
 #projects {
-    background-color: var(--background-second-section);
+    background-color: var(--background-first-section);
     color: var(--text-second-section);
 }
 
@@ -254,12 +289,16 @@ section {
     padding: 20px;
     border-top: 2px solid var(--text-home);
 }
+
+.project-desc {
+    margin-bottom: 10px;
+}
 /* ********** End of CSS for projects' section ********** */
 
 
 /* **********   CSS for experiences' section   ********** */
 #experience {
-    background-color: var(--background-first-section);
+    background-color: var(--background-second-section);
     color: var(--text-first-section);
 }
 
@@ -309,7 +348,7 @@ section {
 /* ******** End of CSS for experiences' section  ******** */
 
 #blog {
-    background-color: var(--background-second-section);
+    background-color: var(--background-first-section);
     color: var(--text-second-section);
 }
 
