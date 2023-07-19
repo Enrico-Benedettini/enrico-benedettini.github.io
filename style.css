@@ -189,6 +189,10 @@ section {
     font-size: 34px;
 }
 
+.job-title-desc {
+    margin: 0;
+}
+
 #about {
     background-color: var(--background-second-section);
     color: var(--text-second-section);
