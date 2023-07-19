@@ -75,6 +75,8 @@ function setNightModeListener() {
     switchToOppositeColor('--text-home')
     switchToOppositeColor('--text-skills')
     switchToOppositeColor('--border-line')
+    switchToOppositeColor('--background-minigames')
+    switchToOppositeColor('--text-minigames')
   });
 }
 

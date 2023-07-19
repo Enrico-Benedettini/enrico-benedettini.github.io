@@ -16,6 +16,8 @@
     --text-first-section:rgb(0, 0, 0);
     --background-second-section:rgb(230, 230, 230);
     --text-second-section:rgb(20, 20, 20);
+    --background-minigames:rgb(240, 120, 0);
+    --text-minigames:rgb(0, 240, 160);
     --text-skills:rgb(255, 255, 255);
     --background-footer-begin:rgb(0, 255, 234);
     --background-footer-end:rgb(0, 183, 255);
@@ -329,8 +331,8 @@ section {
 }
 
 .experience iframe {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .description-right, .description-left {
@@ -347,9 +349,9 @@ section {
 }
 /* ******** End of CSS for experiences' section  ******** */
 
-#blog {
-    background-color: var(--background-first-section);
-    color: var(--text-second-section);
+#minigames {
+    background-color: var(--background-minigames);
+    color: var(--text-minigames);
 }
 
 /* **********     CSS for contacts' section    ********** */
