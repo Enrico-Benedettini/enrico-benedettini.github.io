@@ -127,12 +127,9 @@ p {
 
 /* **********         CSS for header         ********** */
 .header {
-    /* margin-top: 40px; */
     padding: 20px;
     background-color: var(--background-header);
     background-image: linear-gradient(to top right, var(--background-header-begin),var(--background-header-end));
-    /* display: grid;
-    grid-template-columns: 450fr 1fr 2500fr; */
 }
 
 .profile-picture {
@@ -186,6 +183,10 @@ section {
 #home > .container > div { 
     display: flex;
     flex-direction: column;
+}
+
+.job-title {
+    font-size: 34px;
 }
 
 #about {
@@ -354,6 +355,18 @@ section {
     color: var(--text-minigames);
 }
 
+.games {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+}
+
+.left {
+    grid-column: 2;
+}
+
+.right {
+    grid-column: 3;
+}
 /* **********     CSS for contacts' section    ********** */
 #contact {
     display: block;
