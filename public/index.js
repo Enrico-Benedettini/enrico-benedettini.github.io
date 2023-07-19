@@ -16,7 +16,7 @@ function setNavbarHiding() {
     
     const currentScrollPos = window.pageYOffset;
     if (prevScrollPos < currentScrollPos && currentScrollPos != 0) {
-      navbar.style.top = '-50px'; // Adjust this value based on the navbar height
+      navbar.style.top = '-100px'; // Adjust this value based on the navbar height
     } else if (currentScrollPos == 0) {
       navbar.style.position = 'static'
       navbar.classList.remove('shadow')
@@ -28,7 +28,7 @@ function setNavbarHiding() {
     prevScrollPos = currentScrollPos;
     
     timeout = setTimeout(() => {
-      navbar.style.top = '-50px'; // Adjust this value based on the navbar height
+      navbar.style.top = '-100px'; // Adjust this value based on the navbar height
     }, 5000); // Set the timeout value (in milliseconds) before the navbar hides
   });
 }
