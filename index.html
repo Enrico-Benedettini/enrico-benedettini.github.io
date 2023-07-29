@@ -17,7 +17,8 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
-                <a href="public/Curriculum_Vitae_3_2_No_Nation.pdf">CV</a>
+                <a href="#utilities">Utils</a>
+                <a href="public/Curriculum_Vitae_3_2_No_Nation.pdf" target="_blank">CV</a>
                 <!-- <a href="#minigames">MiniGames</a> -->
             </div>
             
@@ -330,6 +331,17 @@
                     <a href="https://github.com/procrastinot-team/procrastinot" target="_blank">GitHub repo</a>
                 </div>
 
+                <div class="project sdp">
+
+                    <h3>Personal Website</h3>
+                    <p class="project-desc">
+                        Well if you're here then you already know what it's about, but at the end of this paragraph you'll find the code.
+                        <br>
+                        This website is entirely developed in <strong>plain HTML5/CSS3</strong> and <strong>Javascript</strong> only.
+                    </p>
+                    <a href="https://github.com/Enrico-Benedettini/enrico-benedettini.github.io" target="_blank">GitHub repo</a>
+                </div>
+
             </div>
         </section>
 
@@ -400,7 +412,7 @@
                             for which I won the <strong>tender</strong> in my high school.
                             <br>
                             There, I could take care of the troubleshooting for various clients, fixing the network
-                            or for customer service.
+                            doing customer service.
                             <br>
                             Also developed an archive management software to handle the receipts from every 
                             customer.
@@ -447,6 +459,88 @@
                 </p>
             </div>
         </section> -->
+
+        <section id="utilities">
+            <div class="container border-line-l">
+                <h2>Utilities</h2>
+                <div class="util">
+                    <h3>Cover Letters' adapter</h3>
+                    <div class="util-content">
+                        <div class="source">
+                            <textarea name="source" cols="40" rows="10">
+Enrico Benedettini
+Via Zurigo 3
+Lugano, Ticino, Switzerland, 6900
+enrico.benedettini@gmail.com
++39 3453329757
+[Date]
+
+[Recipient's Name]
+[Company Name]
+[Company Address]
+[City, State, Country, ZIP Code]
+
+Dear [Recipient's Name],
+
+I am writing to express my strong interest in the [Position Name] at [Company Name]. As a final year student at Università della Svizzera italiana, with a passion for backend development and algorithms optimization, I am excited about the opportunity to contribute my skills and experiences to a dynamic software company like [Company Name].
+
+Throughout my academic journey at ETH and EPFL, I have actively sought to apply my knowledge in real-world settings. At USI, I led a team of 5 developers in implementing authentication with OAuth2 APIs and achieving 97% code coverage with top-quality ratings. I also co-led a team of 14 in developing a Web-App, where I optimized backend performance using SpringBoot and enhanced frontend animations with Vue.js.
+
+My proficiency extends to various technologies, including Java, C#, and frameworks like Vue.js. Additionally, I am currently exploring AI and machine learning, taking an introduction to Machine Learning this semester, which I believe will further complement my skill set.
+
+I find immense joy in collaborating with teams, understanding the importance of the human side in driving successful projects. As I aspire to grow and learn continuously, I am particularly drawn to [Company Name]'s commitment to innovation and technological advancement.
+
+I would welcome the opportunity to discuss how my experiences align with [Company Name]'s vision and how I can contribute to your continued success. Thank you for considering my application. I eagerly look forward to the possibility of joining your talented team.
+
+Sincerely,
+
+Enrico
+                            </textarea>
+                            <p>or</p>
+                            <input type="file" name="src">
+                        </div>
+                        <div class="company-data">
+                            <label for="position-name" class="data-piece">Position's Name</label>
+                            <input type="text" name="position-name" class="data-piece" placeholder="Recruiting Team">
+
+                            <label for="recipient-name" class="data-piece">Recipient's Name</label>
+                            <input type="text" name="recipient-name" class="data-piece" placeholder="Recruiting Team">
+
+                            <label for="company-name" class="data-piece">Company's Name</label>
+                            <input type="text" name="company-name" class="data-piece" placeholder="Meta">
+
+                            <label for="company-address" class="data-piece">Company's Address</label>
+                            <input type="text" name="company-address" class="data-piece" placeholder="Giesshübelstrasse 30">
+
+                            <label for="company-city" class="data-piece">City</label>
+                            <input type="text" name="company-city" class="data-piece" placeholder="Zürich">
+
+                            <label for="company-state" class="data-piece">State</label>
+                            <input type="text" name="company-state" class="data-piece" placeholder="Zürich">
+
+                            <label for="company-country" class="data-piece">Country</label>
+                            <input type="text" name="company-country" class="data-piece" placeholder="Switzerland">
+
+                            <label for="company-zip-code" class="data-piece">ZIP Code</label>
+                            <input type="text" name="company-zip-code" class="data-piece" placeholder="8045">
+
+                            <input type="button" name="insert" value="Insert" class="data-piece">
+                        </div>
+                        <div class="result">
+                            <textarea name="result" cols="40" rows="10">
+                                
+                            </textarea>
+                            <p>or</p>
+                            <button class="download">
+                                <a href="public/CoverLetter.pdf" target="_blank">
+                                    <i class="fa-solid fa-download"></i> Download .pdf file
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact">
             <div class="container">

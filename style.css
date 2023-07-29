@@ -2,8 +2,9 @@
 :root {
     --background:rgb(0, 136, 255);
     --text:rgb(255, 255, 255);
-    --background-night-mode:rgb(0, 0, 0);
-    --text-night-mode:rgb(255, 255, 255);
+    --background-button:rgb(0, 247, 255);
+    --background-button-hover:rgb(0, 183, 255);
+    --text-button:rgb(0, 0, 0);
     --background-header-begin:rgb(0, 72, 255);
     --background-header-end:rgb(0, 4, 255);
     --background-card-begin:rgba(0, 149, 255, 0.7);
@@ -200,12 +201,13 @@ section {
 
 #education {
     background-color: var(--background-first-section);
+    color: var(--text-first-section);
 }
 
 /* **********      CSS for skills' section     ********** */
 #skills {
     background-color: var(--background-second-section);
-    color: var(--text-first-section);
+    color: var(--text-second-section);
     padding-bottom: 60px;
 }
 
@@ -285,7 +287,7 @@ section {
 /* **********     CSS for projects' section    ********** */
 #projects {
     background-color: var(--background-first-section);
-    color: var(--text-second-section);
+    color: var(--text-first-section);
 }
 
 #projects > .container > br {
@@ -306,7 +308,7 @@ section {
 /* **********   CSS for experiences' section   ********** */
 #experience {
     background-color: var(--background-second-section);
-    color: var(--text-first-section);
+    color: var(--text-second-section);
 }
 
 .content {
@@ -352,8 +354,9 @@ section {
 .description-left {
     padding-right: 25px;
 }
-/* ******** End of CSS for experiences' section  ******** */
+/* ********  End of CSS for experiences' section  ******** */
 
+/* **********     CSS for minigames' section    ********** */
 #minigames {
     background-color: var(--background-minigames);
     color: var(--text-minigames);
@@ -371,6 +374,91 @@ section {
 .right {
     grid-column: 3;
 }
+/* **********    CSS for utilities' section    ********** */
+#utilities {
+    background-color: var(--background-first-section);
+    color: var(--text-first-section);
+}
+
+.util {
+    display: flex;
+    flex-direction: column;
+}
+
+.util-content {
+    display: grid;
+    grid-template-columns: 5fr 8fr 5fr;
+}
+
+.source {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.source p, .result p {
+    margin: 5px;
+}
+
+textarea[name="source"] {
+    flex: 1 0 auto;
+    resize: none;
+}
+
+.company-data {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    grid-column: 2;
+    padding: 0 15px;
+}
+
+.result {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea[name="result"] {
+    flex: 1 0 auto;
+    resize: none;
+}
+
+button.download {
+    background-color: var(--background-first-section);
+    border: 0;
+    font-size: medium;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.data-piece {
+    margin: 5px;
+}
+
+input[name="insert"] {
+    background-color: var(--background-button);
+    font-weight: bold;
+    color: var(--text-button);
+    padding: 5px;
+    font-size: large;
+    margin-top: 10px;
+    border: 2px solid var(--text-button);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+input[name="insert"]:hover {
+    background-color: var(--background-button-hover);
+}
+/* ********   End of CSS for utilities' section  ******** */
+
 /* **********     CSS for contacts' section    ********** */
 #contact {
     display: block;
