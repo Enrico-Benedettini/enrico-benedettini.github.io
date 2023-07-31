@@ -232,6 +232,7 @@ section {
     perspective: 1000px; /* Perspective value for 3D transforms */
     position: relative;
     margin: 50px;
+    right: 10px; /* Modifies position of elements with relative position */
     margin-bottom: 40px;
     color: var(--text-skills);
 }
@@ -246,6 +247,11 @@ section {
 
 .card:hover .card-inner {
     transform: rotateY(-180deg);
+}
+
+.card:nth-child(2n) { /* Apply changes to the right column, 
+    by choosing only even children with class card */
+    /* right: 50px; */
 }
 
 .card-front,
