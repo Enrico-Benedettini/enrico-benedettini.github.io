@@ -1,11 +1,11 @@
 /* General variables */
-:root {
-    --background:rgb(0, 136, 255);
+/* :root {
+    --background:rgb(0, 119, 204);
     --text:rgb(255, 255, 255);
     --background-button:rgb(0, 247, 255);
     --background-button-hover:rgb(0, 183, 255);
     --text-button:rgb(0, 0, 0);
-    --background-header-begin:rgb(0, 72, 255);
+    --background-header-begin:rgb(0, 90, 153);
     --background-header-end:rgb(0, 4, 255);
     --background-card-begin:rgba(0, 149, 255, 0.7);
     --background-card-end:rgba(0, 4, 255, 1);
@@ -25,7 +25,37 @@
     --link-text:rgb(30, 30, 30);
     --hover-text:rgb(90, 90, 90);
     --text-home:rgb(0, 0, 0);
+} */
+
+/* General variables */
+:root {
+    --background: rgb(0, 90, 153); /* Dark Blue for main background */
+    --text: rgb(255, 255, 255); /* White for text */
+    --background-button: rgb(0, 119, 204); /* Primary Blue for buttons */
+    --background-button-hover: rgb(125, 162, 206); /* Subtle Blue for button hover state */
+    --text-button: rgb(0, 0, 0); /* Black text for buttons */
+    --background-header-begin: rgb(0, 90, 153); /* Dark Blue gradient start for header */
+    --background-header-end: rgb(0, 119, 204); /* Primary Blue gradient end for header */
+    --background-card-begin: rgba(230, 244, 255, 0.7); /* Light Blue for card gradient start */
+    --background-card-end: rgba(0, 119, 204, 1); /* Primary Blue for card gradient end */
+    --background-home: rgb(247, 247, 247); /* Light Gray for home section background */
+    --background-hover: rgb(220, 220, 220); /* Mid Gray for hover state */
+    --background-selected: rgb(0, 119, 204); /* Primary Blue for selected state */
+    --border-line: rgb(0, 119, 204); /* Primary Blue for border lines */
+    --background-first-section: var(--background-home); /* Use background home color */
+    --text-first-section: rgb(0, 0, 0); /* Black for text */
+    --background-second-section: rgb(230, 244, 255); /* Light Blue for alternating section background */
+    --text-second-section: rgb(20, 20, 20); /* Slightly off-black for readability */
+    --background-minigames: rgb(240, 120, 0); /* This can be an accent color */
+    --text-minigames: rgb(0, 240, 160); /* This can be another accent color */
+    --text-skills: rgb(255, 255, 255); /* White for text */
+    --background-footer-begin: rgb(0, 119, 204); /* Primary Blue for footer gradient start */
+    --background-footer-end: rgb(125, 162, 206); /* Subtle Blue for footer gradient end */
+    --link-text: rgb(30, 30, 30); /* Slightly off-black for links */
+    --hover-text: rgb(90, 90, 90); /* Dark Gray for hover state on text */
+    --text-home: rgb(0, 0, 0); /* Black for text */
 }
+
 
 /* Default settings for the whole page */
 body {
