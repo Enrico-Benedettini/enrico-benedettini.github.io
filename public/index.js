@@ -58,7 +58,6 @@ function setNightModeListener() {
     switchToOppositeColor('--text')
     switchToOppositeColor('--background-night-mode')
     switchToOppositeColor('--text-night-mode')
-    switchToOppositeColor('--background-first-section')
     switchToOppositeColor('--text-first-section')
     switchToOppositeColor('--background-second-section')
     switchToOppositeColor('--text-second-section')
