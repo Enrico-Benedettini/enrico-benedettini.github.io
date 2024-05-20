@@ -344,6 +344,10 @@ section {
     line-height: 1.5;
 }
 
+.experience {
+    padding: 20px;
+}
+
 .experience iframe {
     width: 150px;
     height: 150px;
