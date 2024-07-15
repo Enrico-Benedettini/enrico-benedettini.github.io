@@ -1,7 +1,6 @@
 // import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 let dropdownContent = 
 `
-<div class="dropdown hidden">
 <p>
     As of une 2024, I am actively looking for a job after completing my studies at <strong>USI</strong> in Lugano, Switzerland.
     Currently I'm located in Lugano, after spending an unhappy semester at <strong>EPFL</strong> in Lausanne,
@@ -48,7 +47,6 @@ let dropdownContent =
     a proficient project manager, contributing
     to the success of ambitious and impactful initiatives.
 </p>
-</div>
 `
 
 
@@ -98,14 +96,19 @@ function setNavLinksListeners() {
 function setDropdownListeners() {
   let btn = document.querySelector('.btn-dropdown');
   btn.addEventListener('click', () => {
-    let content = document.querySelector('.dropdown');
-    if(content.classList.contains('hidden')) {
-      content.classList.remove('hidden');
-      btn.classList.add('hidden');
+    // content.classList.add('hidden');
+    let aboutDiv = document.querySelector('#about > .container')
+    if(btn.querySelector('i').classList.contains('fa-ellipsis')) {
+      btn.innerHTML = `<i class="fa-solid fa-caret-up"></i>`;
+      let content = document.createElement('div');
+      content.innerHTML = dropdownContent;
+      content.classList.add('dropdown');
+      aboutDiv.appendChild(content);
     } else {
-      content.classList.add('hidden');
-      btn.classList.remove('hidden');
+      btn.innerHTML = `<i class="fa-solid fa-ellipsis"></i>`;
+      aboutDiv.removeChild(aboutDiv.lastChild);
     }
+    
   });
 }
 
