@@ -1,4 +1,56 @@
 // import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+let dropdownContent = 
+`
+<div class="dropdown hidden">
+<p>
+    As of une 2024, I am actively looking for a job after completing my studies at <strong>USI</strong> in Lugano, Switzerland.
+    Currently I'm located in Lugano, after spending an unhappy semester at <strong>EPFL</strong> in Lausanne,
+    and another semester at <strong>ETH</strong> in Zürich, which both are institutions globally renowned for their academic excellence.
+    
+    Also, I was privileged to have received a <strong>scholarship</strong>
+    for academic credit at my home university, <strong>USI</strong>, in Lugano.
+    
+    This further motivates me to strive for excellence in everything I undertake.
+</p>
+
+<br>
+  
+<p>
+    My main interests lie in backend development, with a strong
+    focus on <strong>algorithms and data structures</strong>.
+
+    I find immense satisfaction in optimizing algorithms and
+    ensuring they perform at their best, as this directly contributes
+    to the overall efficiency and effectiveness of software systems.
+</p>
+
+<br>
+  
+<p>
+    My ultimate career aspiration is to become a seasoned project manager.
+    I am deeply committed to expanding my skills in both development and
+    management, with the goal of overseeing and successfully delivering complex projects.
+    strong knowledge
+    Hard work and continuous improvement are fundamental values that drive me,
+    and I am always eager to embrace challenges and seize opportunities for growth.
+</p>
+
+<br>
+  
+<p>
+    In summary, I am a highly motivated and driven individual with
+    a passion for <strong>programming</strong>, <strong>management</strong>, 
+    and continuous learning. I am currently pursuing my studies
+    at <strong>EPFL</strong>, leveraging my experiences from <strong>ETH</strong>
+    and previous projects to excel in backend development.
+    
+    My goal is to further enhance my skills and knowledge to become 
+    a proficient project manager, contributing
+    to the success of ambitious and impactful initiatives.
+</p>
+</div>
+`
+
 
 // function to hide the navbar after 5 seconds of inactivity
 function setNavbarHiding() {
@@ -41,6 +93,21 @@ function setNavLinksListeners() {
       a.classList.add('active');
     });
   })
+}
+
+function setDropdownListeners() {
+  let btn = document.querySelector('.btn-dropdown');
+  btn.addEventListener('click', () => {
+    debugger
+    let content = document.querySelector('.dropdown');
+    if(content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      btn.classList.add('hidden');
+    } else {
+      content.classList.add('hidden');
+      btn.classList.remove('hidden');
+    }
+  });
 }
 
 function setNightModeListener() {
@@ -189,7 +256,8 @@ function setInsertButtonListener() {
 setNavbarHiding()
 setNavLinksListeners()
 setNightModeListener()
-setInsertButtonListener()
+setDropdownListeners()
+// setInsertButtonListener()
 
 let coverLetter = `
 Enrico Benedettini

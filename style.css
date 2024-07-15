@@ -206,6 +206,18 @@ section {
 }
 
 /* **********      CSS for skills' section     ********** */
+.dropdown {
+}
+
+.hidden {
+    visibility: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+/* **********  End of CSS for skills' section  ********** */
+
+/* **********      CSS for skills' section     ********** */
 #skills {
     background-color: var(--background-second-section);
     color: var(--text-second-section);
