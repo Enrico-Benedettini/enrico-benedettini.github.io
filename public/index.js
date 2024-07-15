@@ -98,7 +98,6 @@ function setNavLinksListeners() {
 function setDropdownListeners() {
   let btn = document.querySelector('.btn-dropdown');
   btn.addEventListener('click', () => {
-    debugger
     let content = document.querySelector('.dropdown');
     if(content.classList.contains('hidden')) {
       content.classList.remove('hidden');
