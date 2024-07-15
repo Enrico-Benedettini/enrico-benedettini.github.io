@@ -58,6 +58,11 @@ p {
     text-align: center;
 }
 
+button {
+    border: 0ch;
+    background: none;
+}
+
 .border-line-l {
     padding: 20px;
     border-left: 1px solid var(--border-line)
@@ -220,7 +225,7 @@ section {
 /* **********      CSS for skills' section     ********** */
 #skills {
     background-color: var(--background-second-section);
-    color: var(--text-second-section);
+    /* color: var(--text-second-section); */
     padding-bottom: 60px;
 }
 
@@ -247,7 +252,7 @@ section {
     margin: 50px;
     right: 10px; /* Modifies position of elements with relative position */
     margin-bottom: 40px;
-    color: var(--text-skills);
+    /* color: var(--text-skills); */
 }
 
 .card-inner {
