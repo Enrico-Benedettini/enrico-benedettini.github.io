@@ -72,6 +72,12 @@ button {
     border-right: 1px solid var(--border-line)
 }
 
+iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
 /* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);
@@ -543,6 +549,10 @@ input[name="insert"]:hover {
     text-align: left;
 }
 /* ********** End of CSS for contacts' section ********** */
+
+.hidden {
+    display: none;
+}
 
 /* Mobile view styling */
 @media (max-width: 768px) {
