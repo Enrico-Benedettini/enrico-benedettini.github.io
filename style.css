@@ -19,7 +19,6 @@
     --text-second-section:rgb(20, 20, 20); /* Slightly off-black for readability */
     --background-minigames:rgb(240, 120, 0); /* This can be an accent color */
     --text-minigames:rgb(0, 240, 160); /* This can be another accent color */
-    --text-skills:rgb(255, 255, 255); /* White for text */
     --background-footer-begin:rgb(0, 119, 204); /* Primary Blue for footer gradient start */
     --background-footer-end:rgb(125, 162, 206); /* Subtle Blue for footer gradient end */
     --link-text:rgb(30, 30, 30); /* Slightly off-black for links */
@@ -72,6 +71,7 @@ button {
     padding: 20px;
     border-right: 1px solid var(--border-line)
 }
+
 /* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);
@@ -86,8 +86,24 @@ button {
     justify-content: space-between; /* Distribute the links across the full width */
     transition: top 0.3s ease-in-out;
 }
+  
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
-.navbar-content {
+.bar {
+    background-color: var(--text);
+}
+  
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+}
+
+.navbar-links {
     grid-column: 2;
     width: 100%;
     display: flex;
@@ -103,6 +119,8 @@ button {
     text-decoration: none;
     font-size: 17px;
     flex-grow: 1; /* Allow the links to flex and fill the available space */
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .navbar > div > a:hover {
@@ -211,13 +229,8 @@ section {
 }
 
 /* **********      CSS for skills' section     ********** */
-.dropdown {
-}
-
-.hidden {
-    visibility: hidden;
-    position: relative;
-    z-index: 2;
+i {
+    color: var(--text-first-section);
 }
 
 /* **********  End of CSS for skills' section  ********** */
@@ -252,7 +265,6 @@ section {
     margin: 50px;
     right: 10px; /* Modifies position of elements with relative position */
     margin-bottom: 40px;
-    /* color: var(--text-skills); */
 }
 
 .card-inner {
@@ -531,3 +543,37 @@ input[name="insert"]:hover {
     text-align: left;
 }
 /* ********** End of CSS for contacts' section ********** */
+
+/* Mobile view styling */
+@media (max-width: 768px) {
+    .navbar {
+      position: fixed;
+      z-index: 6;
+    }
+
+    .navbar-toggle {
+      padding: 7.5px 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar-links.drop {
+      display: flex;
+    }
+  
+    .navbar-links a {
+      text-align: left;
+      padding: 12px;
+      border-top: 0px;
+    }
+
+    .header {
+        margin-top: 50px;
+    }
+  }
