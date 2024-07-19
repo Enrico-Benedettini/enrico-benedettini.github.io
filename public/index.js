@@ -187,6 +187,7 @@ function setToggleListener() {
 
   if (toggleButton) { 
     toggleButton.addEventListener('click', function() {
+      debugger
       navbarLinks.classList.toggle('drop');
     });
   }
@@ -203,5 +204,5 @@ document.addEventListener('DOMContentLoaded', function() {
   setNavLinksListeners()
   setNightModeListener()
   setDropdownListeners()
-  setToggleListener()
+  // setToggleListener()
 });
