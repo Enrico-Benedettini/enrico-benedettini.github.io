@@ -653,6 +653,10 @@ input[name="insert"]:hover {
         padding: 10px;
     }
 
+    .is-flipped {
+        transform: rotateY(180deg);
+    }
+
     .experience iframe {
         width: 100px;
         height: 100px;

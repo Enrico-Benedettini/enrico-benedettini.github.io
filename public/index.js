@@ -28,6 +28,7 @@ function createMobileButton() {
 function checkWindowSize() {
   if (window.innerWidth <= 768) {
     createMobileButton();
+    setCardTurnListener();
   } else {
     // Remove the button if it exists and the window is resized to a larger size
     const toggleButton = document.getElementById('navbar-toggle');
@@ -193,6 +194,14 @@ function setToggleListener() {
   }
 }
 
+function setCardTurnListener() {
+  document.querySelectorAll('.card').forEach((card) => {
+    card.addEventListener('click', () => {
+      card.querySelector('.card-inner').classList.toggle('is-flipped');
+    })
+  });
+}
+
 
 checkWindowSize()
 
@@ -204,5 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
   setNavLinksListeners()
   setNightModeListener()
   setDropdownListeners()
+  setCardTurnListener()
   // setToggleListener()
 });
