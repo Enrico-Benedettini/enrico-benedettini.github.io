@@ -24,6 +24,7 @@
     --link-text:rgb(30, 30, 30); /* Slightly off-black for links */
     --hover-text:rgb(90, 90, 90); /* Dark Gray for hover state on text */
     --text-home:rgb(0, 0, 0); /* Black for text */
+    text-overflow: ellipsis;
 }
 
 
@@ -124,7 +125,6 @@ iframe {
     font-size: 17px;
     flex-grow: 1; /* Allow the links to flex and fill the available space */
     white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .navbar > div > a:hover {
@@ -551,9 +551,34 @@ input[name="insert"]:hover {
 .hidden {
     display: none;
 }
+@media (max-width: 1000px) {
+
+    .navbar > div > a {
+        max-width: 70px;
+        overflow: hidden;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #skills > .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* Mobile view styling */
 @media (max-width: 768px) {
+    img[alt="Profile Picture"] {
+        display: none;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+
     .navbar {
       position: fixed;
       z-index: 6;
@@ -579,6 +604,10 @@ input[name="insert"]:hover {
       text-align: left;
       padding: 12px;
       border-top: 0px;
+    }
+
+    .navbar > div > a {
+        max-width: none;
     }
 
     .header {
