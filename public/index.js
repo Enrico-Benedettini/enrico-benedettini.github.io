@@ -78,12 +78,14 @@ function setNavbarHiding() {
       const sections = document.querySelectorAll('section');
       // Section visibility logic
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        debugger
-        if (currentScrollPos >= sectionTop - window.innerHeight && currentScrollPos < sectionTop + sectionHeight) {
-          if (!section.classList.contains('fade-in')) {
-            section.classList.add('fade-in');
+        if (section.id != 'contact') {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          debugger
+          if (currentScrollPos >= sectionTop - window.innerHeight && currentScrollPos < sectionTop + sectionHeight) {
+            if (!section.classList.contains('fade-in')) {
+              section.classList.add('fade-in');
+            }
           }
         }
       });
