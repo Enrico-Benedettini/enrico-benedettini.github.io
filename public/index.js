@@ -53,6 +53,7 @@ function setNavbarHiding() {
       navbar.style.position = 'fixed'
     }
   }
+
   window.addEventListener('scroll', () => {
     if (window.innerWidth > 768) {
       clearTimeout(timeout);
@@ -74,6 +75,18 @@ function setNavbarHiding() {
       timeout = setTimeout(() => {
         navbar.style.top = '-100px'; // Adjust this value based on the navbar height
       }, 5000); // Set the timeout value (in milliseconds) before the navbar hides
+      const sections = document.querySelectorAll('section');
+      // Section visibility logic
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        debugger
+        if (currentScrollPos >= sectionTop - window.innerHeight && currentScrollPos < sectionTop + sectionHeight) {
+          if (!section.classList.contains('fade-in')) {
+            section.classList.add('fade-in');
+          }
+        }
+      });
     }
   });
 }
@@ -101,8 +114,16 @@ function showOrHideContent(btn, content) {
   if(btn.querySelector('i').classList.contains('fa-ellipsis')) {
     btn.innerHTML = `<i class="fa-solid fa-caret-up"></i>`;
     content.classList.remove('hidden');
+    content.classList.add('fade-in');
+    if (content.classList.contains('fade-out')) {  
+      content.classList.remove('fade-out');
+    }
   } else {
     btn.innerHTML = `<i class="fa-solid fa-ellipsis"></i>`;
+    content.classList.add('fade-out');
+    if (content.classList.contains('fade-in')) {  
+      content.classList.remove('fade-in');
+    }
     content.classList.add('hidden');
   }
 }
@@ -214,5 +235,4 @@ document.addEventListener('DOMContentLoaded', function() {
   setNightModeListener()
   setDropdownListeners()
   setCardTurnListener()
-  // setToggleListener()
 });

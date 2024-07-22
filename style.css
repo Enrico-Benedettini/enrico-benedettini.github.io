@@ -31,6 +31,7 @@
 /* Default settings for the whole page */
 body {
     background-color: var(--background);
+    animation: fadeIn 3s forwards 0.1ms;
 }
 
 a {
@@ -77,6 +78,23 @@ iframe {
     border: 0;
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
 /* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);
@@ -195,6 +213,7 @@ section {
     color: var(--text-home);
     padding-top: 30px;
     padding-bottom: 30px;
+    /* opacity: 0; */
 }
 
 .container {
@@ -550,6 +569,16 @@ input[name="insert"]:hover {
 
 .hidden {
     display: none;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+    opacity: 1;
+}
+
+.fade-out {
+    animation: fadeOut 3s forwards;
+    opacity: 0;
 }
 @media (max-width: 1000px) {
 
