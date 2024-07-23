@@ -40,57 +40,60 @@ function checkWindowSize() {
   }
 }
 
+function handleScroll() {
+  let prevScrollPos = window.pageYOffset;
+  let timeout;
+  const navbar = document.querySelector('.navbar');
+  if (window.innerWidth > 768) {
+    clearTimeout(timeout);
+    navbar.style.top = '0';
+    
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos < currentScrollPos && currentScrollPos != 0) {
+      navbar.style.top = '-100px'; 
+    } else if (currentScrollPos == 0) {
+      navbar.style.position = 'static'
+      navbar.classList.remove('shadow')
+    } else {
+      navbar.style.position = 'fixed'
+      navbar.classList.add('shadow')
+    }
+    
+    prevScrollPos = currentScrollPos;
+    
+    timeout = setTimeout(() => {
+      debugger
+      navbar.style.top = '-100px'; 
+    }, 5000); // Set the timeout value (in milliseconds) before the navbar hides
+    const sections = document.querySelectorAll('section');
+    // Section visibility logic
+    sections.forEach(section => {
+      if (section.id != 'contact') {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (currentScrollPos >= sectionTop - window.innerHeight && currentScrollPos < sectionTop + sectionHeight) {
+          if (!section.classList.contains('fade-in')) {
+            section.classList.add('fade-in');
+          }
+        }
+      }
+    });
+  }
+}
+
 // function to hide the navbar after 5 seconds of inactivity
 function setNavbarHiding() {
-  let timeout;
-  let prevScrollPos = window.pageYOffset;
   const navbar = document.querySelector('.navbar');
 
   if (window.innerWidth > 768) {
-    if (prevScrollPos == 0) {
+    if (window.pageYOffset == 0) {
       navbar.style.position = 'static'
     } else {
       navbar.style.position = 'fixed'
     }
   }
 
-  window.addEventListener('scroll', () => {
-    if (window.innerWidth > 768) {
-      clearTimeout(timeout);
-      navbar.style.top = '0';
-      
-      const currentScrollPos = window.pageYOffset;
-      if (prevScrollPos < currentScrollPos && currentScrollPos != 0) {
-        navbar.style.top = '-100px'; // Adjust this value based on the navbar height
-      } else if (currentScrollPos == 0) {
-        navbar.style.position = 'static'
-        navbar.classList.remove('shadow')
-      } else {
-        navbar.style.position = 'fixed'
-        navbar.classList.add('shadow')
-      }
-      
-      prevScrollPos = currentScrollPos;
-      
-      timeout = setTimeout(() => {
-        navbar.style.top = '-100px'; // Adjust this value based on the navbar height
-      }, 5000); // Set the timeout value (in milliseconds) before the navbar hides
-      const sections = document.querySelectorAll('section');
-      // Section visibility logic
-      sections.forEach(section => {
-        if (section.id != 'contact') {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          debugger
-          if (currentScrollPos >= sectionTop - window.innerHeight && currentScrollPos < sectionTop + sectionHeight) {
-            if (!section.classList.contains('fade-in')) {
-              section.classList.add('fade-in');
-            }
-          }
-        }
-      });
-    }
-  });
+  window.addEventListener('scroll', handleScroll);
 }
 
 function setNavLinksListeners() {
@@ -211,7 +214,6 @@ function setToggleListener() {
 
   if (toggleButton) { 
     toggleButton.addEventListener('click', function() {
-      debugger
       navbarLinks.classList.toggle('drop');
     });
   }
