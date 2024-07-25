@@ -1,3 +1,5 @@
+let timeout;
+
 function createMobileButton() {
   // Check if the button already exists
   if (document.getElementById('navbar-toggle')) return;
@@ -42,7 +44,6 @@ function checkWindowSize() {
 
 function handleScroll() {
   let prevScrollPos = window.pageYOffset;
-  let timeout;
   const navbar = document.querySelector('.navbar');
   if (window.innerWidth > 768) {
     clearTimeout(timeout);
