@@ -581,13 +581,15 @@ input[name="insert"]:hover {
     animation: fadeOut 3s forwards;
     opacity: 0;
 }
-@media (max-width: 1000px) {
 
+@media (max-width: 1000px) {
     .navbar > div > a {
         max-width: 70px;
         overflow: hidden;
     }
+}
 
+@media (max-width: 1200px) {
     .skills {
         display: flex;
         flex-direction: column;

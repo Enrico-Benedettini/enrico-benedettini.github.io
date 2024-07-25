@@ -229,7 +229,7 @@ function setCardTurnListener() {
 
 
 checkWindowSize()
-
+handleScroll()
 
 window.addEventListener('resize', checkWindowSize);
 
