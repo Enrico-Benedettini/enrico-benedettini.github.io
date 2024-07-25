@@ -31,7 +31,6 @@
 /* Default settings for the whole page */
 body {
     background-color: var(--background);
-    animation: fadeIn 3s forwards 0.1ms;
 }
 
 a {
