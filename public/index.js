@@ -77,12 +77,18 @@ function handleScroll() {
             section.classList.add('fade-in');
             let ps = section.querySelectorAll('p');
             if (section.id!='skills'){
-              ps.forEach((p)=>{
-                p.classList.add('typing-text');
-                let localTimeout = setTimeout(() => {
-                  p.style.border = 0;
-                }, 3000); // Set the timeout value (in milliseconds) before the navbar hides
-              })
+              ps.forEach((p, index) => {
+                let delay = index * 1000;
+                if (section.id == 'experience' || 'projects') {
+                  delay = index * 200;
+                }
+                setTimeout(() => {
+                  p.classList.add('typing-text');
+                  setTimeout(() => {
+                    p.style.borderRight = "0";
+                  }, 2500); 
+                }, delay);
+              });
             }
           }
         }
@@ -130,7 +136,18 @@ function showOrHideContent(btn, content) {
     btn.innerHTML = `<i class="fa-solid fa-caret-up"></i>`;
     content.classList.remove('hidden');
     content.classList.add('fade-in');
-    content.querySelector('p').classList.add('typing-text');
+    let ps = content.querySelectorAll('p');
+    if (content.id!='skills'){
+      ps.forEach((p, index) => {
+        let delay = index * 1000;
+        setTimeout(() => {
+          p.classList.add('typing-text');
+          setTimeout(() => {
+            p.style.borderRight = "0";
+          }, 2500);
+        }, delay);
+      });
+    }
     if (content.classList.contains('fade-out')) {  
       content.classList.remove('fade-out');
     }
@@ -139,6 +156,12 @@ function showOrHideContent(btn, content) {
     content.classList.add('fade-out');
     if (content.classList.contains('fade-in')) {  
       content.classList.remove('fade-in');
+    }
+    let ps = content.querySelectorAll('p');
+    if (content.id!='skills'){
+      ps.forEach((p) => {
+        p.classList.remove('typing-text')
+      })
     }
     content.classList.add('hidden');
   }

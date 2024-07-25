@@ -56,6 +56,7 @@ h1 {
 p {
     margin: 0;
     text-align: center;
+    width: 0;
 }
 
 button {
@@ -115,7 +116,8 @@ iframe {
 
 .typing-text {
     border-right: 0.15em solid black; /* Creates the blinking cursor effect */
-    animation: typing 2s steps(40, end), blink-caret 0.75s step-end 3;
+    animation: typing 2s steps(40, end), blink-caret 0.5s step-end 4;
+    width: 100%;
 }
 /* **********         CSS for navbar         ********** */
 .navbar {
@@ -301,6 +303,10 @@ i {
     grid-column: 2;
     display: grid;
     grid-template-columns: 10fr 1fr 10fr;
+}
+
+.skills p {
+    width: 100%;
 }
 
 .card {
@@ -587,6 +593,7 @@ input[name="insert"]:hover {
 .contacts > p {
     margin: 5px 0;
     text-align: left;
+    width: 100%;
 }
 /* ********** End of CSS for contacts' section ********** */
 
