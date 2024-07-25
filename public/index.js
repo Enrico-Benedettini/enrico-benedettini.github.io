@@ -80,9 +80,8 @@ function handleScroll() {
               ps.forEach((p)=>{
                 p.classList.add('typing-text');
                 let localTimeout = setTimeout(() => {
-                  debugger
                   p.style.border = 0;
-                }, 6000); // Set the timeout value (in milliseconds) before the navbar hides
+                }, 3000); // Set the timeout value (in milliseconds) before the navbar hides
               })
             }
           }
