@@ -94,6 +94,29 @@ iframe {
       opacity: 0;
     }
 }
+
+@keyframes typing {
+    from { 
+      width: 0; 
+    }
+    to { 
+      width: 100%; 
+    }
+}
+
+@keyframes blink-caret {
+    from, to { 
+      border-color: transparent; 
+    }
+    50% { 
+      border-color: black; 
+    }
+}
+
+.typing-text {
+    border-right: 0.15em solid black; /* Creates the blinking cursor effect */
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end 3;
+}
 /* **********         CSS for navbar         ********** */
 .navbar {
     background-color: var(--background);

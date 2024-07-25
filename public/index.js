@@ -63,9 +63,9 @@ function handleScroll() {
     prevScrollPos = currentScrollPos;
     
     timeout = setTimeout(() => {
-      debugger
       navbar.style.top = '-100px'; 
     }, 5000); // Set the timeout value (in milliseconds) before the navbar hides
+
     const sections = document.querySelectorAll('section');
     // Section visibility logic
     sections.forEach(section => {
@@ -75,6 +75,16 @@ function handleScroll() {
         if (currentScrollPos >= sectionTop - window.innerHeight && currentScrollPos < sectionTop + sectionHeight) {
           if (!section.classList.contains('fade-in')) {
             section.classList.add('fade-in');
+            let ps = section.querySelectorAll('p');
+            if (section.id!='skills'){
+              ps.forEach((p)=>{
+                p.classList.add('typing-text');
+                let localTimeout = setTimeout(() => {
+                  debugger
+                  p.style.border = 0;
+                }, 6000); // Set the timeout value (in milliseconds) before the navbar hides
+              })
+            }
           }
         }
       }
@@ -121,6 +131,7 @@ function showOrHideContent(btn, content) {
     btn.innerHTML = `<i class="fa-solid fa-caret-up"></i>`;
     content.classList.remove('hidden');
     content.classList.add('fade-in');
+    content.querySelector('p').classList.add('typing-text');
     if (content.classList.contains('fade-out')) {  
       content.classList.remove('fade-out');
     }
