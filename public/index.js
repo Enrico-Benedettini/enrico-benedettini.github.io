@@ -45,7 +45,7 @@ function checkWindowSize() {
 function handleScroll() {
   let prevScrollPos = window.pageYOffset;
   const navbar = document.querySelector('.navbar');
-  if (window.innerWidth > 768) {
+  // if (window.innerWidth > 768) {
     clearTimeout(timeout);
     navbar.style.top = '0';
     
@@ -94,7 +94,7 @@ function handleScroll() {
         }
       }
     });
-  }
+  // }
 }
 
 // function to hide the navbar after 5 seconds of inactivity
